@@ -1,0 +1,14 @@
+﻿.landinglogoclass {
+    display: flex;
+}
+
+
+.colheaderimage {
+    position: relative;
+    background: url("../assets/abstractshape.png") top center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
