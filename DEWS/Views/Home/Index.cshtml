@@ -1,0 +1,166 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_Landing.cshtml";
+}
+
+<header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+        <div class="landinglogoclass">
+            <img id="futhimage" src="~/assets/futh.png" alt="futh" height="50">
+            <img id="tetfundimage" src="~/assets/tetfund.png" alt="tetfund" height="50">
+        </div>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+
+    </div>
+</header>
+
+
+<section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="hero-wrapper mb-4">
+                    <h1 class="hero-title mb-4 landingheadertitle">
+                        DROUGHT <span class="textheader">WARNING SYSTEM</span> FOR NORTHERN NIGERIA
+                </div>
+
+
+                <div class="mt-4">
+                    <a href="#clients" class="btn btn-primary mt-2 mr-2 startedbtn">Get Started</a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-8">
+                <div class="home-img mt-5 mt-lg-0 colheaderimage">
+                    <img src="~/assets/droughto-bg.png" alt="" class="img-fluid mx-auto d-block landingpageimage1" width="400">
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+
+<section id="clients" class="clients section-bg">
+    <div class="container">
+
+        <form asp-controller="Home" asp-action="Search" method="post">
+            <div class="row searchindexrow">
+
+                <div class="col-lg-3 col-md-3 col-6 d-flex searchindexinput">
+                    <div class="form-group dy">
+                        <label for="country">Country</label>
+                        <select class="form-control" formControlName="country" id="country" name="country">
+                            <option value="" disabled selected>-- Select Country --</option>
+                            <option> Nigeria </option>
+                        </select>
+                    </div>
+                    <div class="error-messages">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-6 d-flex searchindexinput">
+                    <div class="form-group dy">
+                        <label for="region">Region</label>
+                        <select class="form-control" formControlName="region" id="region" name="region">
+                            <option value="" disabled selected>-- Select Region --</option>
+                            <option> Sahel</option>
+                            <option> Sudan</option>
+                            <option> Guinea Savanna</option>
+                            <option> Southern Savanna</option>
+                        </select>
+                    </div>
+                    <div class="error-messages">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-3 col-md-3 col-6 d-flex searchindexinput">
+                    <div class="form-group dy">
+                        <label for="year">Year</label>
+                        <select class="form-control" formControlName="year" id="year" name="year">
+                            <option value="" disabled selected>-- Select Year --</option>
+                            <option> 2016</option>
+                            <option> 2017</option>
+                            <option> 2018</option>
+                            <option> 2019</option>
+                            <option> 2020</option>
+                            <option> 2021</option>
+                            <option> 2022</option>
+                            <option> 2023</option>
+                            <option> 2024</option>
+                            <option> 2025</option>
+                        </select>
+                    </div>
+                    <div class="error-messages">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-2 col-md-3 col-6 d-flex searchindexinput">
+                    <div class="searchindexsubmitbtn">
+                        <button class="btn btn-primary searchbtn"
+                                type="submit">
+                            Search
+                        </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </form>
+
+    </div>
+</section>
+
+
+<section id="about-video" class="about-video">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+            <div class="col-lg-6 video-box align-self-baseline" data-aos="fade-right" data-aos-delay="100">
+                <img src="~/assets/map1.jpg" class="img-fluid" alt="">
+            </div>
+
+            <div class="col-lg-6 pt-3 pt-lg-0 content" data-aos="fade-left" data-aos-delay="100">
+                <div class="card bar-chart-example">
+                    <div class="card-header d-flex align-items-center">
+                        <h4>Bar Chart Example</h4>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="barChartExample"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<footer id="footer">
+
+
+    <div class="container d-md-flex py-4">
+
+        <div class="me-md-auto text-center text-md-start">
+            <div class="copyright">
+                &copy; Copyright <strong><span>FUTH/TETFUND</span></strong>. All Rights Reserved
+            </div>
+        </div>
+        <div class="social-links text-center text-md-right pt-3 pt-md-0">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+        </div>
+    </div>
+</footer>

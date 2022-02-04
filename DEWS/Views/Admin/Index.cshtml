@@ -1,0 +1,139 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!-- Side Navbar -->
+<nav class="side-navbar side-navbar-white">
+    <div class="side-navbar-wrapper">
+        <!-- Sidebar Header    -->
+        <div class="sidenav-header side-navbar-white d-flex align-items-center justify-content-center">
+            <!-- User Info-->
+            <div class="sidenav-header-inner text-center">
+                <span class="container-fluid"><img src="~/assets/img/ncclogo.svg" /></span>
+            </div>
+            <!-- Small Brand information, appears on minimized sidebar-->
+            <div class="sidenav-header-logo"><a href="index.html" class="brand-small text-center"> <strong>B</strong><strong class="text-primary">D</strong></a></div>
+        </div>
+        <!-- Sidebar Navigation Menus-->
+        <div class="main-menu">
+            <ul id="side-main-menu" class="side-menu list-unstyled">
+                <li><a href="index.html"><i class="fa fa-home"></i>Home </a></li>
+                <li class="active">
+                    <a href="#formsDropdown" aria-expanded="true" data-toggle="collapse"> <i class="icon-form"></i>Forms </a>
+                    <ul id="formsDropdown" class="collapse list-unstyled show">
+                        <li><a href="forms.html">Basic forms</a></li>
+                        <li class="active"><a href="forms-advanced.html">Advanced forms</a></li>
+                        <li><a href="forms-autocomplete.html">Autocomplete</a></li>
+                        <li><a href="forms-dropzone.html">Files upload</a></li>
+                        <li><a href="forms-texteditor.html">Text editor</a></li>
+                        <li><a href="forms-validation.html">Validation</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="page">
+    <!-- navbar-->
+    <header class="header">
+        <nav class="navbar navbar-blue">
+            <div class="container-fluid">
+                <div class="navbar-holder d-flex align-items-center justify-content-between">
+                    <div class="navbar-header">
+                        <a id="toggle-btn" href="#" class="menu-btn"><i class="icon-bars"> </i></a><a href="index.html" class="navbar-brand">
+                            <div class="brand-text d-none d-md-inline-block"><span>Economic Analysis &amp; Tariff Management System </span></div>
+                        </a>
+                    </div>
+                    <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                        <!-- Notifications dropdown-->
+                        <li class="nav-item dropdown">
+                            <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell"></i><span class="badge badge-warning">12</span></a>
+                            <ul aria-labelledby="notifications" class="dropdown-menu">
+                                <li>
+                                    <a rel="nofollow" href="#" class="dropdown-item">
+                                        <div class="notification d-flex justify-content-between">
+                                            <div class="notification-content"><i class="fa fa-envelope"></i>You have 6 new messages </div>
+                                            <div class="notification-time"><small>4 minutes ago</small></div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong> <i class="fa fa-bell"></i>view all notifications                                            </strong></a></li>
+                            </ul>
+                        </li>
+                        <!-- Change password-->
+                        <li class="nav-item">
+                            <!-- <a href="#" class="nav-link"> <span class="d-none d-sm-inline-block">My Profile</span></a>-->
+                            <a href="#" class="nav-link">
+                                <!-- <img src="img/avatar-7.jpg" class="img-fluid rounded-circle" alt="">-->
+                                <span class="hidden-xs">Bodeniyi</span>
+                            </a>
+                        </li>
+                        <!-- Log out-->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="d-none d-sm-inline-block">Sign Out</span>
+                            </a>
+                        </li>
+                        <!-- NCC Apps-->
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="d-none d-sm-inline-block">NCC Apps</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Breadcrumb-->
+    <div class="breadcrumb-holder">
+        <div class="container-fluid">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active">Advanced forms       </li>
+            </ul>
+        </div>
+    </div>
+    <section>
+        <div class="container-fluid">
+            <!-- Page Header-->
+            <header>
+                <h3 class="h3 display">Advanced forms</h3>
+            </header>
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- No UI Slider-->
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>No UI Slider</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Read more about this component at <a href="https://refreshless.com/nouislider/">https://refreshless.com/nouislider/</a>.</p>
+                            <form>
+                                <div class="nouislider">
+                                    <div id="basicNoUISlider"></div>
+                                </div>
+                                <div class="nouislider mt-5">
+                                    <div id="stepNoUISlider"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Your company &copy; 2017-2020</p>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <p>Version 1.4.7</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

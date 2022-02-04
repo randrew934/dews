@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+<div class="page login-page logindivclass">
+    <div class="container sddd">
+        <div class="form-outer text-center align-items-center loginbody1">
+            <div class="form-inner adfe">
+                <div class="backhome">
+                    <a asp-controller="Home" asp-action="Index">
+                        <i class="mdi mdi-chevron-double-left"></i>
+                        Back Home
+                    </a>
+                </div>
+
+                <div class="loginlogoclass">
+                    <img id="futhimage" src="~/assets/futh.png" alt="futh">
+                    <img id="tetfundimage" src="~/assets/tetfund.png" alt="tetfund">
+                </div>
+
+                <form asp-controller="Home" asp-action="Login" method="post">
+
+                    <div class="form-group logininput">
+                        <label for="email">Email Address</label>
+                        <input type="email"
+                               placeholder="Email Address"
+                               required
+                               id="email"
+                               name="email"
+                               formControlName="email"
+                               class="form-control" />
+                    </div>
+                    <div class="error-messages">
+                    </div>
+
+
+
+
+                    <div class="form-group logininput" id="passwordinput">
+                        <label for="password">Password</label>
+                        <div class="passwordClass">
+                            <input placeholder="Password"
+                                   required
+                                   id="password"
+                                   name="password"
+                                   formControlName="password"
+                                   class="form-control"
+                                   type="password" />
+                            <span class="material-icons eyeclass" item-right>visibility</span>
+                        </div>
+                    </div>
+                    <div class="error-messages">
+                    </div>
+
+
+                    <div class="loginsubmitbtn">
+                        <button class="btn btn-primary loginbtn"
+                                type="submit">
+                            Login To Account
+                        </button>
+
+                    </div>
+
+                </form>
+            </div>
+            <div class="loginbody2">
+                <div class="signup">
+                    <span>Don't have an account? <a asp-controller="Home" asp-action="Index">Create An Account</a></span>
+                </div>
+
+                <div class="forgotpassword">
+                    <a asp-controller="Home" asp-action="Index">Forgot Your Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
